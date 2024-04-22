@@ -15,7 +15,7 @@
         - Check emulate baud rate
         - Complete the setup process.
 
-2. **MongoDB setupš:**
+2. **MongoDB setup:**
     - Install MongoDB if you haven't already.
     - Create a new database named "streetliftingValidatorDB".
     - Within the database, create a collection named "measurement".

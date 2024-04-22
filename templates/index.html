@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Measurement Monitor</title>
 
+    <script src="script.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -13,18 +15,4 @@
 
     <ul id="measurement_list"></ul>
 </body>
-    <script>
-        const socket = io();
-
-        socket.on('Update_measurements', (measurements) => {
-            const measurementList = document.getElementById("measurement_list");
-            measurementList.innerHTML = "";
-
-            measurements.forEach(measurement => {
-                const listItem = document.createElement("li");
-                listItem.textContent = JSON.stringify(measurement);
-                measurementList.appendChild(listItem);
-            });
-        });
-    </script>
 </html>
